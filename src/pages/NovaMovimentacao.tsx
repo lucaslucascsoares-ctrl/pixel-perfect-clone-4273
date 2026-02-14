@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
 import MobileLayout from "@/components/MobileLayout";
-import { BottomNav } from "@/pages/Dashboard";
 
 const NovaMovimentacao = () => {
   const navigate = useNavigate();
@@ -16,7 +15,7 @@ const NovaMovimentacao = () => {
     <MobileLayout>
       <div className="flex flex-col flex-1">
         {/* Header */}
-        <div className="flex items-center gap-3 px-5 pt-5 pb-3">
+        <div className="flex items-center gap-3 px-5 pt-5 pb-4">
           <button onClick={() => navigate(-1)}>
             <ChevronLeft className="w-6 h-6 text-foreground" />
           </button>
@@ -25,19 +24,19 @@ const NovaMovimentacao = () => {
 
         <div className="px-5 flex-1 space-y-5">
           {/* Toggle */}
-          <div className="flex rounded-lg border overflow-hidden">
+          <div className="flex rounded-full border overflow-hidden">
             <button
               onClick={() => setTipo("entrada")}
               className={`flex-1 py-2.5 text-sm font-semibold transition-colors ${
-                tipo === "entrada" ? "bg-primary text-primary-foreground" : "bg-card text-muted-foreground"
+                tipo === "entrada" ? "bg-foreground text-primary-foreground" : "bg-card text-muted-foreground"
               }`}
             >
               Entrada
             </button>
             <button
               onClick={() => setTipo("saida")}
-              className={`flex-1 py-2.5 text-sm font-semibold transition-colors ${
-                tipo === "saida" ? "bg-primary text-primary-foreground" : "bg-card text-muted-foreground"
+              className={`flex-1 py-2.5 text-sm font-bold transition-colors ${
+                tipo === "saida" ? "bg-foreground text-primary-foreground" : "bg-card text-muted-foreground"
               }`}
             >
               Saída
@@ -68,12 +67,10 @@ const NovaMovimentacao = () => {
           <Field label="Descrição" value={descricao} onChange={setDescricao} placeholder="Opcional" />
           <Field label="Pago para" value={pagoPara} onChange={setPagoPara} placeholder="Opcional" />
 
-          <button className="w-full py-3.5 rounded-xl font-bold text-primary-foreground bg-primary hover:opacity-90 transition-all">
+          <button className="w-full py-3.5 rounded-xl font-bold text-primary-foreground bg-foreground hover:opacity-90 transition-all">
             Salvar
           </button>
         </div>
-
-        <BottomNav navigate={navigate} active="nova" />
       </div>
     </MobileLayout>
   );
