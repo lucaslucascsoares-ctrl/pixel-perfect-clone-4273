@@ -1,93 +1,61 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Check, ChevronRight } from "lucide-react";
+import { Home, Heart, Store } from "lucide-react";
 import ElefinLogo from "@/components/ElefinLogo";
 import MobileLayout from "@/components/MobileLayout";
-import pessoaFisicaImg from "@/assets/pessoa-fisica.png";
-import pessoaJuridicaImg from "@/assets/pessoa-juridica.png";
 
-type UserType = "pf" | "pj" | null;
+type ProfileType = "familia" | "autonomo" | "negocio" | null;
+
+const profiles = [
+  { key: "familia" as const, icon: Home, label: "Família" },
+  { key: "autonomo" as const, icon: Heart, label: "Autônomo" },
+  { key: "negocio" as const, icon: Store, label: "Negócio" },
+];
 
 const Onboarding = () => {
-  const [selected, setSelected] = useState<UserType>(null);
+  const [selected, setSelected] = useState<ProfileType>(null);
   const navigate = useNavigate();
-
-  const handleContinue = () => {
-    if (selected) navigate("/dashboard");
-  };
 
   return (
     <MobileLayout>
-      <div className="flex flex-col items-center px-6 pt-8 pb-6 flex-1">
-        <ElefinLogo />
+      <div className="flex flex-col px-6 pt-10 pb-6 flex-1">
+        <ElefinLogo className="mb-8" />
 
-        <div className="mt-6 text-center">
-          <p className="text-2xl">👋</p>
-          <h1 className="text-lg font-bold text-foreground mt-1">Bem-vindo ao Elefin</h1>
-          <p className="text-sm text-muted-foreground mt-1">
-            Para personalizar sua experiência, nos diga:
-          </p>
+        <h1 className="text-lg font-bold text-foreground">Bem-vindo ao Elefin</h1>
+
+        <p className="text-sm font-semibold text-foreground mt-6">Escolha o seu perfil:</p>
+
+        <div className="mt-4 border rounded-xl p-5 flex justify-around">
+          {profiles.map(({ key, icon: Icon, label }) => (
+            <button
+              key={key}
+              onClick={() => setSelected(key)}
+              className={`flex flex-col items-center gap-2 transition-all ${
+                selected === key ? "text-foreground" : "text-muted-foreground"
+              }`}
+            >
+              <div className={`w-12 h-12 rounded-lg border-2 flex items-center justify-center transition-all ${
+                selected === key ? "border-foreground bg-muted" : "border-border"
+              }`}>
+                <Icon className="w-6 h-6" />
+              </div>
+              <span className="text-xs font-semibold">{label}</span>
+            </button>
+          ))}
         </div>
 
-        <div className="mt-5 flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-          <span className="font-bold text-foreground">Você é:</span>
+        <div className="mt-auto">
+          <button
+            onClick={() => selected && navigate("/dashboard")}
+            disabled={!selected}
+            className="w-full py-3.5 rounded-xl font-bold text-primary-foreground bg-foreground disabled:opacity-40 transition-all hover:opacity-90"
+          >
+            Começar
+          </button>
         </div>
-
-        <div className="mt-4 w-full space-y-3 flex-1">
-          <OptionCard
-            selected={selected === "pf"}
-            onClick={() => setSelected("pf")}
-            image={pessoaFisicaImg}
-            title="Pessoa Física"
-            description="Para uso pessoal, familiar ou autônomo."
-          />
-          <OptionCard
-            selected={selected === "pj"}
-            onClick={() => setSelected("pj")}
-            image={pessoaJuridicaImg}
-            title="Pessoa Jurídica"
-            description="Para empresas, comércios ou prestadores de serviço"
-          />
-        </div>
-
-        <button
-          onClick={handleContinue}
-          disabled={!selected}
-          className="mt-6 w-full py-3.5 rounded-xl font-bold text-primary-foreground bg-primary disabled:opacity-40 transition-all hover:opacity-90"
-        >
-          Continuar
-        </button>
       </div>
     </MobileLayout>
   );
 };
-
-const OptionCard = ({
-  selected, onClick, image, title, description,
-}: {
-  selected: boolean; onClick: () => void; image: string; title: string; description: string;
-}) => (
-  <button
-    onClick={onClick}
-    className={`relative w-full rounded-xl border-2 p-4 text-left transition-all ${
-      selected ? "border-primary bg-accent" : "border-border bg-card hover:border-primary/40"
-    }`}
-  >
-    {selected && (
-      <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-        <Check className="w-4 h-4 text-primary-foreground" />
-      </div>
-    )}
-    <div className="flex items-center gap-4">
-      <img src={image} alt={title} className="w-20 h-20 object-contain rounded-lg" />
-      <div className="flex-1">
-        <h3 className="font-bold text-foreground">{title}</h3>
-        <p className="text-sm text-muted-foreground mt-0.5">{description}</p>
-      </div>
-      <ChevronRight className="w-5 h-5 text-muted-foreground" />
-    </div>
-  </button>
-);
 
 export default Onboarding;
