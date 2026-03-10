@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Onboarding from "./pages/Onboarding";
+import OnboardingOrganizar from "./pages/OnboardingOrganizar";
 import Dashboard from "./pages/Dashboard";
 import NovaMovimentacao from "./pages/NovaMovimentacao";
 import ReguaGastos from "./pages/ReguaGastos";
