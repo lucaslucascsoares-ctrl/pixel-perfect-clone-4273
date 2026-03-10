@@ -84,6 +84,19 @@ const Onboarding = () => {
           </button>
         </div>
 
+        {/* Continue Button */}
+        <button
+          onClick={() => {
+            if (selected === "cpf") {
+              navigate("/onboarding/organizar");
+            }
+          }}
+          className="w-full py-3 rounded-xl text-white font-bold text-base mb-8 transition-all"
+          style={{ backgroundColor: "#5ba8d4" }}
+        >
+          Continuar
+        </button>
+
         {/* Pagination Dots */}
         <div className="flex gap-2">
           <div
