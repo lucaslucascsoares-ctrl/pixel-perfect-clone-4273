@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, User, Users } from "lucide-react";
+import OnboardingProgress from "@/components/OnboardingProgress";
 
 const OnboardingOrganizar = () => {
   const navigate = useNavigate();
