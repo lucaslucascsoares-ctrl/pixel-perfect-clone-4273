@@ -5,7 +5,7 @@ const Splash = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timer = setTimeout(() => navigate("/onboarding"), 2500);
+    const timer = setTimeout(() => navigate("/onboarding/cpf"), 2500);
     return () => clearTimeout(timer);
   }, [navigate]);
 
