@@ -12,7 +12,7 @@ const OnboardingOrganizar = () => {
       {/* Header with back button */}
       <div className="pt-6 px-6">
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/onboarding/cpf")}
           className="flex items-center justify-center w-10 h-10 rounded-full"
           style={{ color: "#3a4a5c" }}
         >
