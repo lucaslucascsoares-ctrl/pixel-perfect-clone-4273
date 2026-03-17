@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Users, Store } from "lucide-react";
+import OnboardingProgress from "@/components/OnboardingProgress";
 
 type ProfileType = "cpf" | "cnpj";
 
@@ -14,6 +15,10 @@ const Onboarding = () => {
       style={{ backgroundColor: "#f0f6fb" }}
     >
       <div className="flex flex-col items-center w-full max-w-[380px] px-6">
+        {/* Progress Bar */}
+        <div className="w-full mb-8">
+          <OnboardingProgress currentStep={1} totalSteps={2} />
+        </div>
         {/* Logo */}
         <div className="flex items-center gap-2.5 mb-10">
           <span className="text-3xl">🐘</span>
@@ -97,21 +102,6 @@ const Onboarding = () => {
           Continuar
         </button>
 
-        {/* Pagination Dots */}
-        <div className="flex gap-2">
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#c8d6e0" }}
-          />
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#5ba8d4" }}
-          />
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#c8d6e0" }}
-          />
-        </div>
       </div>
     </div>
   );
