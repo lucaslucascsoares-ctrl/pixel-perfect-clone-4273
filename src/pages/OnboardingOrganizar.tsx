@@ -10,8 +10,11 @@ const OnboardingOrganizar = () => {
       className="min-h-screen flex flex-col"
       style={{ backgroundColor: "#f0f6fb" }}
     >
+      <div className="px-6 pt-4">
+        <OnboardingProgress currentStep={2} totalSteps={2} />
+      </div>
       {/* Header with back button */}
-      <div className="pt-6 px-6">
+      <div className="pt-4 px-6">
         <button
           onClick={() => navigate("/onboarding/cpf")}
           className="flex items-center justify-center w-10 h-10 rounded-full"

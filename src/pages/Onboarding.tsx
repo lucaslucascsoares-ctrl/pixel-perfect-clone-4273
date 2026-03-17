@@ -102,21 +102,6 @@ const Onboarding = () => {
           Continuar
         </button>
 
-        {/* Pagination Dots */}
-        <div className="flex gap-2">
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#c8d6e0" }}
-          />
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#5ba8d4" }}
-          />
-          <div
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: "#c8d6e0" }}
-          />
-        </div>
       </div>
     </div>
   );
