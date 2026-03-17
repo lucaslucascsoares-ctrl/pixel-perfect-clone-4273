@@ -18,6 +18,15 @@ const OnboardingOrganizar = () => {
         >
           <ArrowLeft size={24} />
         </button>
+        <div className="flex items-center gap-2.5 mt-4 justify-center">
+          <span className="text-3xl">🐘</span>
+          <span
+            className="text-2xl font-extrabold tracking-tight"
+            style={{ color: "#1a2e4a" }}
+          >
+            Elefin
+          </span>
+        </div>
       </div>
 
       {/* Content */}
