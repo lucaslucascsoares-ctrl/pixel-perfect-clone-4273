@@ -9,6 +9,7 @@ import OnboardingOrganizar from "./pages/OnboardingOrganizar";
 import Dashboard from "./pages/Dashboard";
 import NovaMovimentacao from "./pages/NovaMovimentacao";
 import ReguaGastos from "./pages/ReguaGastos";
+import CadastroPessoal from "./pages/CadastroPessoal";
 import Dicas from "./pages/Dicas";
 import NotFound from "./pages/NotFound";
 
