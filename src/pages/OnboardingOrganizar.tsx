@@ -46,6 +46,7 @@ const OnboardingOrganizar = () => {
         <div className="flex flex-col gap-4">
           {/* Card Pessoal */}
           <button
+            onClick={() => navigate("/onboarding/cadastro-pessoal")}
             className="flex items-center gap-4 w-full p-5 rounded-2xl border-2 text-left transition-all hover:border-[#5ba8d4]"
             style={{
               backgroundColor: "#ffffff",

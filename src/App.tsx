@@ -9,6 +9,7 @@ import OnboardingOrganizar from "./pages/OnboardingOrganizar";
 import Dashboard from "./pages/Dashboard";
 import NovaMovimentacao from "./pages/NovaMovimentacao";
 import ReguaGastos from "./pages/ReguaGastos";
+import CadastroPessoal from "./pages/CadastroPessoal";
 import Dicas from "./pages/Dicas";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Splash />} />
           <Route path="/onboarding/cpf" element={<Onboarding />} />
           <Route path="/onboarding/organizar" element={<OnboardingOrganizar />} />
+          <Route path="/onboarding/cadastro-pessoal" element={<CadastroPessoal />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/nova-movimentacao" element={<NovaMovimentacao />} />
           <Route path="/regua-gastos" element={<ReguaGastos />} />
