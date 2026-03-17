@@ -25,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Splash />} />
           <Route path="/onboarding/cpf" element={<Onboarding />} />
           <Route path="/onboarding/organizar" element={<OnboardingOrganizar />} />
+          <Route path="/onboarding/cadastro-pessoal" element={<CadastroPessoal />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/nova-movimentacao" element={<NovaMovimentacao />} />
           <Route path="/regua-gastos" element={<ReguaGastos />} />
