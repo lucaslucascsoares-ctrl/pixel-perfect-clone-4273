@@ -15,6 +15,10 @@ const Onboarding = () => {
       style={{ backgroundColor: "#f0f6fb" }}
     >
       <div className="flex flex-col items-center w-full max-w-[380px] px-6">
+        {/* Progress Bar */}
+        <div className="w-full mb-8">
+          <OnboardingProgress currentStep={1} totalSteps={2} />
+        </div>
         {/* Logo */}
         <div className="flex items-center gap-2.5 mb-10">
           <span className="text-3xl">🐘</span>
