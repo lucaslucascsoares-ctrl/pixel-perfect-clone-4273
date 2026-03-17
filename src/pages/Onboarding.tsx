@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Users, Store } from "lucide-react";
+import OnboardingProgress from "@/components/OnboardingProgress";
 
 type ProfileType = "cpf" | "cnpj";
 
