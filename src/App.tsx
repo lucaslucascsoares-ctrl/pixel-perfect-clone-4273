@@ -11,6 +11,7 @@ import NovaMovimentacao from "./pages/NovaMovimentacao";
 import ReguaGastos from "./pages/ReguaGastos";
 import CadastroPessoal from "./pages/CadastroPessoal";
 import CadastroFamiliar from "./pages/CadastroFamiliar";
+import Login from "./pages/Login";
 import Dicas from "./pages/Dicas";
 import NotFound from "./pages/NotFound";
 
