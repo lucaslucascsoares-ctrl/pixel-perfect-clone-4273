@@ -65,7 +65,7 @@ const CadastroPessoal = () => {
                 value={form[field as keyof typeof form]}
                 onChange={(e) => handleChange(field, e.target.value)}
                 placeholder={placeholder}
-                className="w-full px-4 py-3 rounded-xl border-2 text-base outline-none transition-colors focus:border-[hsl(var(--primary))]"
+                className="bg-white w-full px-4 py-3 rounded-xl border-2 text-base outline-none transition-colors focus:border-[hsl(var(--primary))]"
                 style={{
                   backgroundColor: "#ffffff",
                   borderColor: "#dce3ea",
@@ -86,7 +86,7 @@ const CadastroPessoal = () => {
                 value={form.senha}
                 onChange={(e) => handleChange("senha", e.target.value)}
                 placeholder="Crie uma senha"
-                className="w-full px-4 py-3 pr-12 rounded-xl border-2 text-base outline-none transition-colors focus:border-[hsl(var(--primary))]"
+                className="bg-white w-full px-4 py-3 pr-12 rounded-xl border-2 text-base outline-none transition-colors focus:border-[hsl(var(--primary))]"
                 style={{
                   backgroundColor: "#ffffff",
                   borderColor: "#dce3ea",

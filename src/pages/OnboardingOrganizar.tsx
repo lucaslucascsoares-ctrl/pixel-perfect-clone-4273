@@ -71,6 +71,7 @@ const OnboardingOrganizar = () => {
 
           {/* Card Familiar */}
           <button
+            onClick={() => navigate("/cadastro-familiar")}
             className="flex items-center gap-4 w-full p-5 rounded-2xl border-2 text-left transition-all hover:border-[#5ba8d4]"
             style={{
               backgroundColor: "#ffffff",

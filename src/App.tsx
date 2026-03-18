@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import NovaMovimentacao from "./pages/NovaMovimentacao";
 import ReguaGastos from "./pages/ReguaGastos";
 import CadastroPessoal from "./pages/CadastroPessoal";
+import CadastroFamiliar from "./pages/CadastroFamiliar";
 import Dicas from "./pages/Dicas";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/onboarding/cpf" element={<Onboarding />} />
           <Route path="/onboarding/organizar" element={<OnboardingOrganizar />} />
           <Route path="/onboarding/cadastro-pessoal" element={<CadastroPessoal />} />
+          <Route path="/cadastro-familiar" element={<CadastroFamiliar />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/nova-movimentacao" element={<NovaMovimentacao />} />
           <Route path="/regua-gastos" element={<ReguaGastos />} />
