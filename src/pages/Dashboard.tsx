@@ -48,7 +48,14 @@ const Dashboard = () => {
 
   return (
     <MobileLayout>
-      <div className="bg-white" style={{ minHeight: "100%", backgroundColor: "#ffffff", position: "relative" }}>
+      <div
+        className="bg-white"
+        style={{
+          minHeight: "100%",
+          backgroundColor: "#ffffff",
+          position: "relative",
+        }}
+      >
         {isMenuOpen && (
           <div
             style={{
@@ -80,7 +87,13 @@ const Dashboard = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ display: "flex", justifyContent: "flex-end", padding: "12px 14px 6px" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              padding: "12px 14px 6px",
+            }}
+          >
             <button
               type="button"
               onClick={() => setIsMenuOpen(false)}
@@ -124,7 +137,10 @@ const Dashboard = () => {
           </nav>
         </div>
 
-        <div className="bg-white" style={{ backgroundColor: "#ffffff", paddingBottom: "20px" }}>
+        <div
+          className="bg-white"
+          style={{ backgroundColor: "#ffffff", paddingBottom: "20px" }}
+        >
           <header
             className="bg-white"
             style={{
@@ -182,7 +198,10 @@ const Dashboard = () => {
             </button>
           </header>
 
-          <main className="bg-white" style={{ backgroundColor: "#ffffff", padding: "14px 12px 0" }}>
+          <main
+            className="bg-white"
+            style={{ backgroundColor: "#ffffff", padding: "14px 12px 0" }}
+          >
             <section
               className="bg-white"
               style={{
@@ -192,8 +211,23 @@ const Dashboard = () => {
                 backgroundColor: "#ffffff",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px" }}>
-                <span style={{ fontSize: "10px", fontWeight: 600, color: "#1a2e4a" }}>Caixa do mês</span>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "8px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "10px",
+                    fontWeight: 600,
+                    color: "#1a2e4a",
+                  }}
+                >
+                  Caixa do mês
+                </span>
                 <button
                   type="button"
                   className="bg-white"
@@ -211,12 +245,26 @@ const Dashboard = () => {
               </div>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "7px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#3a4a5c" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    fontSize: "10px",
+                    color: "#3a4a5c",
+                  }}
+                >
                   <span>Caixa inicial</span>
                   <span>R$ 3.200,00</span>
                 </div>
 
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#3a4a5c" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    fontSize: "10px",
+                    color: "#3a4a5c",
+                  }}
+                >
                   <span>Entradas</span>
                   <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                     <span>R$ 4.500,00</span>
@@ -240,7 +288,14 @@ const Dashboard = () => {
                   </span>
                 </div>
 
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "10px", color: "#3a4a5c" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    fontSize: "10px",
+                    color: "#3a4a5c",
+                  }}
+                >
                   <span>Saídas</span>
                   <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                     <span>- R$ 4.200,00</span>
@@ -273,8 +328,12 @@ const Dashboard = () => {
                     paddingTop: "8px",
                   }}
                 >
-                  <span style={{ fontWeight: 700, color: "#1a2e4a" }}>Saldo atual</span>
-                  <span style={{ fontWeight: 700, color: "#22c55e" }}>R$ 3.500,00</span>
+                  <span style={{ fontWeight: 700, color: "#1a2e4a" }}>
+                    Saldo atual
+                  </span>
+                  <span style={{ fontWeight: 700, color: "#22c55e" }}>
+                    R$ 3.500,00
+                  </span>
                 </div>
               </div>
             </section>
@@ -298,7 +357,10 @@ const Dashboard = () => {
               + Nova Movimentação
             </button>
 
-            <section className="bg-white" style={{ marginTop: "16px", backgroundColor: "#ffffff" }}>
+            <section
+              className="bg-white"
+              style={{ marginTop: "16px", backgroundColor: "#ffffff" }}
+            >
               <h2
                 style={{
                   margin: 0,
@@ -324,7 +386,10 @@ const Dashboard = () => {
                   }}
                 >
                   {yAxisLabels.map((label) => (
-                    <span key={label} style={{ fontSize: "7px", color: "#9caab8", lineHeight: 1 }}>
+                    <span
+                      key={label}
+                      style={{ fontSize: "7px", color: "#9caab8", lineHeight: 1 }}
+                    >
                       {label}%
                     </span>
                   ))}
@@ -356,7 +421,16 @@ const Dashboard = () => {
                     }}
                   >
                     {barData.map((bar) => (
-                      <div key={bar.label} style={{ flex: 1, height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}>
+                      <div
+                        key={bar.label}
+                        style={{
+                          flex: 1,
+                          height: "100%",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "flex-end",
+                        }}
+                      >
                         <span
                           style={{
                             fontSize: "8px",
@@ -414,7 +488,8 @@ const Dashboard = () => {
                   lineHeight: 1.5,
                 }}
               >
-                Necessidades Essenciais estão em 62%, o ideal é até 50%. Reduza sua margem de gastos.
+                Necessidades Essenciais estão em 62%, o ideal é até 50%. Reduza
+                sua margem de gastos.
               </p>
             </section>
           </main>
